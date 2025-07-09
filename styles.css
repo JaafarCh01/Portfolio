@@ -18,6 +18,22 @@ body {
     margin: 0 auto;
     padding: 60px 40px;
     text-align: left;
+    /* Initial state for animation */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Page load animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Main content */
@@ -40,6 +56,10 @@ body {
     font-family: 'JetBrains Mono', monospace;
     max-width: 600px;
     width: 100%;
+    /* Staggered animation for name */
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.8s ease-out 0.2s forwards;
 }
 
 /* Cursor/marker */
@@ -65,6 +85,10 @@ body {
     text-align: left;
     max-width: 600px;
     width: 100%;
+    /* Staggered animation for intro */
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.8s ease-out 0.4s forwards;
 }
 
 .intro p {
@@ -92,6 +116,10 @@ body {
     width: 100%;
     max-width: 600px;
     margin-bottom: 0;
+    /* Staggered animation for image */
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.8s ease-out 0.6s forwards;
 }
 
 .landscape-image {
