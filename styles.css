@@ -1,0 +1,158 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'JetBrains Mono', 'Consolas', 'Monaco', 'Courier New', monospace;
+    line-height: 1.6;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+/* Container and layout */
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    text-align: left;
+}
+
+/* Main content */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Name heading */
+.name {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #000000;
+    letter-spacing: 0;
+    text-align: left;
+    font-family: 'JetBrains Mono', monospace;
+    max-width: 600px;
+    width: 100%;
+}
+
+/* Cursor/marker */
+.cursor {
+    color: #007acc;
+    font-weight: 400;
+    margin-left: 0;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50% {
+        opacity: 1;
+    }
+    51%, 100% {
+        opacity: 0;
+    }
+}
+
+/* Introduction section */
+.intro {
+    margin-bottom: 40px;
+    text-align: left;
+    max-width: 600px;
+    width: 100%;
+}
+
+.intro p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #000000;
+    font-weight: 400;
+    margin-bottom: 10px;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Inline links */
+.inline-link {
+    color: #007acc;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.inline-link:hover {
+    text-decoration: underline;
+}
+
+/* Image section */
+.image-section {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 0;
+}
+
+.landscape-image {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    border-radius: 0;
+    margin-bottom: 15px;
+    display: block;
+    filter: grayscale(100%);
+}
+
+/* Location text */
+.location {
+    font-size: 1rem;
+    color: #666666;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 0;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 40px 30px;
+    }
+    
+    .name {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .intro {
+        margin-bottom: 30px;
+    }
+    
+    .intro p {
+        font-size: 0.85rem;
+        line-height: 1.5;
+        margin-bottom: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 30px 20px;
+    }
+    
+    .name {
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+    }
+    
+    .intro {
+        margin-bottom: 25px;
+    }
+    
+    .intro p {
+        font-size: 0.8rem;
+        line-height: 1.5;
+        margin-bottom: 6px;
+    }
+} 
